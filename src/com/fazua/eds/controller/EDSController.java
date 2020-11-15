@@ -1,12 +1,11 @@
-package sample;
+package com.fazua.eds.controller;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
-import javafx.stage.PopupWindow;
 
-public class Controller {
+public class EDSController {
 
     @FXML
     private TextField serial_number_d;
