@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
-
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="630.0" prefWidth="423.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.fazua.eds.controller.EDSController">
     <children>
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="107.0" layoutY="5.0" text="Evation Drive System EDS" textAlignment="CENTER">
@@ -42,7 +39,9 @@
         <TextField fx:id="serial_number_r" layoutX="29.0" layoutY="495.0" prefHeight="26.0" prefWidth="362.0" />
         <Label layoutX="29.0" layoutY="528.0" text="HMI board serial number" />
         <TextField fx:id="HMI_board_serial_number_r" layoutX="29.0" layoutY="554.0" prefHeight="26.0" prefWidth="362.0" />
-        <Button layoutX="112.0" layoutY="590.0" mnemonicParsing="false" onAction="#onValidate" prefHeight="32.0" prefWidth="82.0" text="Validate" />
-        <Button layoutX="231.0" layoutY="590.0" mnemonicParsing="false" onAction="#onSumbit" prefHeight="32.0" prefWidth="82.0" text="Test" />
+        <Button layoutX="169.0" layoutY="593.0" mnemonicParsing="false" onAction="#onValidate" prefHeight="32.0" prefWidth="82.0" text="Run EDS">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Button>
     </children>
 </AnchorPane>
