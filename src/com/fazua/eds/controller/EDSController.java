@@ -7,7 +7,6 @@ import com.fazua.eds.validator.Validator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 
 import javafx.scene.layout.VBox;
@@ -20,24 +19,23 @@ import java.util.Random;
 
 public class EDSController {
 
+    //Drive Pack
     @FXML
     private TextField serial_number_d;
-
     @FXML
     private TextField software_v_d;
-
     @FXML
     private TextField motoar_serial_number_d;
 
+    //Bottom Bracket
     @FXML
     private TextField serial_number_b;
-
     @FXML
     private TextField torque_sensor_serial_number_b;
 
+    //Remote
     @FXML
     private TextField serial_number_r;
-
     @FXML
     private TextField HMI_board_serial_number_r;
 
@@ -62,13 +60,8 @@ public class EDSController {
         serialNumber_r_validate = false;
         HMI_boardNumber_validate = false;
     }
-    @FXML
-    void onSumbit(ActionEvent event) {
-        Alert dg = new Alert(Alert.AlertType.INFORMATION);
-        dg.setTitle("Result");
-        dg.setContentText("Program successfully tested");
-        dg.show();
-    }
+
+    //Input Validation
     @FXML
     void onValidate(ActionEvent event) throws ValidationException {
         validate = new Validator();
@@ -78,7 +71,7 @@ public class EDSController {
             serial_number_d_validate = validate.validateSerial_number_d(serial_number_d);
             validationMessageExceptionList.add(new ValidationException("***Drive pack - given Serial number is valid: " +
                     validate.getSerial_number_d()));
-            System.out.println(validate.getSerial_number_d());
+            //System.out.println(validate.getSerial_number_d());
         }catch (ValidationException e){
             validationMessageExceptionList.add(e);
         }
@@ -87,7 +80,7 @@ public class EDSController {
             software_v_d_validate = validate.validateSoftwareVersion_d(software_v_d);
             validationMessageExceptionList.add(new ValidationException("***Drive pack - given Software version is valid: " +
                     validate.getSoftware_v_d()));
-            System.out.println(validate.getSoftware_v_d());
+            //System.out.println(validate.getSoftware_v_d());
         }catch (ValidationException e){
             validationMessageExceptionList.add(e);
         }
@@ -96,7 +89,7 @@ public class EDSController {
             motoar_serial_number_d_validate = validate.validateMotoar_serial_number_d(motoar_serial_number_d);
             validationMessageExceptionList.add(new ValidationException("***Drive pack - given Motor serial number is valid: " +
                     validate.getMotoar_serial_number_d()));
-            System.out.println(validate.getMotoar_serial_number_d());
+            //System.out.println(validate.getMotoar_serial_number_d());
         }catch (ValidationException e){
             validationMessageExceptionList.add(e);
         }
@@ -105,7 +98,7 @@ public class EDSController {
             serialNumber_b_validate = validate.validateSerial_number_b(serial_number_b);
             validationMessageExceptionList.add(new ValidationException("***Bottom bracket - given Serial number is valid: " +
                     validate.getSerial_number_b()));
-            System.out.println(validate.getSerial_number_b());
+            //System.out.println(validate.getSerial_number_b());
         }catch (ValidationException e){
             validationMessageExceptionList.add(e);
         }
@@ -114,7 +107,7 @@ public class EDSController {
             torqueNumber_validate = validate.validateTorqueSerialNumber_b(torque_sensor_serial_number_b);
             validationMessageExceptionList.add(new ValidationException("***Bottom bracket - given Torque number is valid: " +
                     validate.getTorque_sensor_serial_number_b()));
-            System.out.println(validate.getTorque_sensor_serial_number_b());
+            //System.out.println(validate.getTorque_sensor_serial_number_b());
         }catch (ValidationException e){
             validationMessageExceptionList.add(e);
         }
@@ -123,7 +116,7 @@ public class EDSController {
             serialNumber_r_validate = validate.validateSerial_number_r(serial_number_r);
             validationMessageExceptionList.add(new ValidationException("***Remote - given Serial number is valid: " +
                     validate.getSerial_number_r()));
-            System.out.println(validate.getSerial_number_r());
+            //System.out.println(validate.getSerial_number_r());
         }catch (ValidationException e){
             validationMessageExceptionList.add(e);
         }
@@ -132,7 +125,7 @@ public class EDSController {
             HMI_boardNumber_validate = validate.validateHMIboardSerialNumber_r(HMI_board_serial_number_r);
             validationMessageExceptionList.add(new ValidationException("***Remote - given HMI board number is valid: " +
                     validate.getHMI_board_serial_number_r()));
-            System.out.println(validate.getHMI_board_serial_number_r());
+            //System.out.println(validate.getHMI_board_serial_number_r());
         }catch (ValidationException e){
             validationMessageExceptionList.add(e);
         }

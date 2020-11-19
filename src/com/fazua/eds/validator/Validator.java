@@ -6,15 +6,23 @@ import javafx.scene.control.TextField;
 import java.nio.charset.Charset;
 
 public class Validator {
+    //Drive Pack
     private static int serial_number_d;
     private static String software_v_d;
     private static Short motoar_serial_number_d;
+
+    //Bottom Bracket
     private static int serial_number_b;
     private static String torque_sensor_serial_number_b;
+
+    //Remote
     private static int serial_number_r;
     private static short HMI_board_serial_number_r;
+
     private static boolean onTest;
 
+
+    //Taking each field input as following requirement specifications
     public boolean validateSerial_number_d(TextField serial_number_d) throws ValidationException {
         try {
             if(Integer.parseInt(serial_number_d.getText()) >=0 && serial_number_d.getText() !=null ){
